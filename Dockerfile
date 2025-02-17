@@ -1,5 +1,5 @@
 # ========== STAGE 1: Build the Go binary ==========
-FROM golang:1.20-alpine AS build
+FROM golang:1.24-alpine AS build
 
 # Set your working directory inside the container
 WORKDIR /app
@@ -13,7 +13,7 @@ COPY . .
 
 # Build the Go binary
 # Example: if your main is in cmd/main.go, you might do:
-RUN go build -o myapp ./cmd
+RUN go build -o myapp .
 
 # ========== STAGE 2: Create a minimal runtime image ==========
 FROM alpine:3.17
