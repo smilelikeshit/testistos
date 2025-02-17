@@ -58,7 +58,7 @@ func main() {
 	handler.NewHandlerAnimal(router, &animalUcase)
 	// 3. Create an HTTP server, specifying the mux as the handler
 	srv := &http.Server{
-		Addr:    ":9090", // or any port you prefer
+		Addr:    ":8080", // or any port you prefer
 		Handler: router,
 	}
 
